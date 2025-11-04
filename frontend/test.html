@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<style>
+:root{
+  --bg:#0b1220; --fg:#e6edf3; --lnum:#94a3b8; --border:#1f2937;
+  --font: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+.code{
+  display:grid;
+  grid-template-columns: auto 1fr;  /* 번호 / 내용 */
+  gap:12px;
+  background:var(--bg);
+  color:var(--fg);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+  font:13.5px/1.6 var(--font);
+  overflow:auto;
+}
+.lines{
+  counter-reset: ln;
+  text-align:right;
+  user-select:none;
+  color:var(--lnum);
+  padding-right:8px;
+  border-right:1px solid var(--border);
+}
+.lines > span{
+  display:block;
+  counter-increment: ln;
+}
+.lines > span::before{
+  content: counter(ln);
+  opacity:.9;
+}
+.src{
+  white-space:pre;
+  tab-size:2;
+}
+</style>
+</head>
+<body>
+
+<div class="code" role="region" aria-label="코드 블록 (줄 번호)">
+  <div class="lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <pre class="src"><code>
+#include &lt;stdio.h&gt;
+
+int main(){
+    printf("Hello, world!\n");
+    return 0;
+}
+</code></pre>
+</div>
+
+<!-- 줄 수에 맞게 .lines > span 개수를 늘리면 됩니다.
+     (간단히 서버에서 생성하거나 JS로 자동화 가능) -->
+
+</body>
+</html>
