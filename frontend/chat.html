@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <title>C Code Runner & AI Assistant</title>
-  <link rel="stylesheet" href="chat.css" />
 
-  <!-- Monaco Editor 로더 (CDN) -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/chat.css">
+
+  <!-- Monaco Editor Loader -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
 
-  <!-- 에디터 초기화 전용 JS -->
-  <script src="chat.js" defer></script>
+  <!-- Main JS -->
+  <script src="/static/chat.js" defer></script>
 </head>
+
 <body>
   <div class="header">
     Online C compiler, visual debugger, and AI tutor
   </div>
 
   <div class="container">
-    <!-- 왼쪽: 코드 + 실행 결과 -->
-    <section class="left-pane">
+    
+    <!-- Left Pane: Code Editor + Execute -->
+    <section class="left-pane"> 
       <div class="title-row">
         <h3>Write C code</h3>
-        <button id="runBtn" class="btn">실행</button>
+        <button id="runBtn" class="btn">execute</button>
       </div>
 
+      <!-- Monaco Editor Area -->
       <div id="editor" class="editor-area"></div>
 
+      <!-- Execution Result -->
       <div class="result-box">
         <div class="result-title">Execution Result</div>
         <div id="execResult" class="result-output">
@@ -34,9 +40,10 @@
       </div>
     </section>
 
-    <!-- 오른쪽: AI 챗봇(UI만) -->
+    <!-- Right pane: AI tutor -->
     <section class="right-pane">
       <h3>AI Assistant</h3>
+
       <div id="chatWindow" class="chat-window"></div>
 
       <div class="chat-input-row">
@@ -44,6 +51,7 @@
         <button id="chatSendBtn" class="btn">보내기</button>
       </div>
     </section>
+
   </div>
 </body>
 </html>

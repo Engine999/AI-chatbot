@@ -3,3 +3,20 @@
 # 환경변수 파일
 .env
 .env.*
+
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Temp
+*.log
+tmp/
+temp/
