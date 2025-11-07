@@ -1,6 +1,3 @@
-// Monaco Editor 초기화 전용 스크립트
-// 실행/채팅 로직은 의도적으로 제외되어 있습니다.
-
 let editor;
 
 (function initMonaco() {
