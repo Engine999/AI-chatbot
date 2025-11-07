@@ -1,0 +1,113 @@
+/* 전체 레이아웃 */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  padding: 14px 20px;
+  background: #ffffff;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* 왼쪽 넓게 */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 공통 박스 */
+.left-pane, .right-pane {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+/* 제목과 버튼을 한 줄로 */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.title-row h3 {
+  margin: 0;
+}
+
+/* 에디터 */
+.editor-area {
+  height: 380px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* 모서리 둥글게 */
+}
+
+/* 실행 결과 상자 */
+.result-box {
+  margin-top: 14px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  background: #ffffff;     /* 요청: 흰색 배경 */
+}
+
+.result-title {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  color: #333;
+}
+
+.result-output {
+  white-space: pre-wrap;
+  font-family: Consolas, ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 12px;
+  min-height: 120px;
+  max-height: 220px;
+  overflow: auto;
+  color: #111;             /* 검은 글자 */
+}
+
+/* 버튼 */
+.btn {
+  padding: 8px 16px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:hover { filter: brightness(.95); }
+
+/* 오른쪽 챗봇 UI */
+.right-pane h3 { margin-top: 0; }
+
+.chat-window {
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  height: 520px;
+  background: #fafafa;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chat-input-row textarea {
+  height: 70px;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
