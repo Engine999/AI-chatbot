@@ -15,7 +15,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* 왼쪽 넓게 */
+  grid-template-columns: 1.2fr 0.8fr; 
   gap: 20px;
   padding: 20px;
 }
@@ -28,7 +28,7 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
 
-/* 제목과 버튼을 한 줄로 */
+
 .title-row {
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ body {
   margin-top: 14px;
   border: 1px solid #e3e3e3;
   border-radius: 8px;
-  background: #ffffff;     /* 요청: 흰색 배경 */
+  background: #ffffff;    
 }
 
 .result-title {
@@ -70,7 +70,7 @@ body {
   min-height: 120px;
   max-height: 220px;
   overflow: auto;
-  color: #111;             /* 검은 글자 */
+  color: #111;            
 }
 
 /* 버튼 */

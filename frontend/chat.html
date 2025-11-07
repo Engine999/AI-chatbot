@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <title>C Code Runner & AI Assistant</title>
   <link rel="stylesheet" href="chat.css" />
-  <!-- Monaco Editor CDN -->
+
+  <!-- Monaco Editor 로더 (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+
+  <!-- 에디터 초기화 전용 JS -->
+  <script src="chat.js" defer></script>
 </head>
 <body>
   <div class="header">
@@ -17,7 +21,6 @@
     <section class="left-pane">
       <div class="title-row">
         <h3>Write C code</h3>
-        <!-- 나중에 JS로 핸들러 연결하세요 (onclick 제거) -->
         <button id="runBtn" class="btn">실행</button>
       </div>
 
@@ -31,7 +34,7 @@
       </div>
     </section>
 
-    <!-- 오른쪽: AI 챗봇 (UI만 남김) -->
+    <!-- 오른쪽: AI 챗봇(UI만) -->
     <section class="right-pane">
       <h3>AI Assistant</h3>
       <div id="chatWindow" class="chat-window"></div>
@@ -42,34 +45,5 @@
       </div>
     </section>
   </div>
-
-  <!-- 최소 JS: 에디터 초기화만 -->
-  <script>
-    let editor;
-    require.config({
-      paths: {
-        vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs",
-      },
-    });
-    require(["vs/editor/editor.main"], function () {
-      editor = monaco.editor.create(document.getElementById("editor"), {
-        value: `#include <stdio.h>
-
-int main() {
-    printf("Hello world");
-    return 0;
-}
-`,
-        language: "c",
-        theme: "vs-dark",
-        automaticLayout: true,
-        fontSize: 15,
-        minimap: { enabled: false },
-      });
-    });
-
-    // 이후 연결용으로만 노출
-    window.getCode = () => (editor ? editor.getValue() : "");
-  </script>
 </body>
 </html>
