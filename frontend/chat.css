@@ -111,3 +111,48 @@ body {
   border: 1px solid #ccc;
   font-family: inherit;
 }
+
+
+
+
+
+/* 공통 메시지 블록 */
+.msg {
+  display: inline-block;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border-radius: 10px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 90%;
+}
+
+/* 사용자 메시지 (오른쪽 정렬, 파란색 말풍선) */
+.msg.user {
+  background: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  float: right;
+  clear: both;
+}
+
+/* AI 어시스턴트 메시지 (왼쪽 정렬, 회색 말풍선) */
+.msg.assistant {
+  background: #e9ecef;
+  color: #111;
+  align-self: flex-start;
+  float: left;
+  clear: both;
+}
+
+/* 시스템 메시지 (중앙 회색 텍스트) */
+.msg.system {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  clear: both;
+  margin: 10px 0;
+}
