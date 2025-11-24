@@ -1,4 +1,3 @@
-# routes/analyze_router.py
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from ..chat.chatbot import gemini_analyze

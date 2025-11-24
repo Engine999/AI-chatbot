@@ -1,4 +1,3 @@
-# routes/chat_router.py
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional

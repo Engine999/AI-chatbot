@@ -1,4 +1,3 @@
-# backend/routes/execute_router.py
 from fastapi import APIRouter
 from pydantic import BaseModel
 from backend.chat.execute import execute_c
