@@ -1,7 +1,11 @@
 # backend/chat/execute.py
 import os, sys, time, tempfile, subprocess, traceback
 
-GCC = r"C:\winlibs\mingw64\bin\gcc.exe"
+#local 경로
+#GCC = r"C:\winlibs\mingw64\bin\gcc.exe"
+
+GCC = "/usr/bin/gcc"
+
 TIMEOUT_SEC = 2
 MAX_OUT = 16 * 1024
 
