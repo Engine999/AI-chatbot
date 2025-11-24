@@ -3,7 +3,13 @@ from google import genai
 from google.genai import types
 import os
 
-load_dotenv(dotenv_path=r"C:\Users\dbswodyd99\Desktop\PTJ\02.AI-chatbot\AI-chatbot\static\.env")
+#local 경로
+# load_dotenv(dotenv_path=r"C:\Users\dbswodyd99\Desktop\PTJ\02.AI-chatbot\AI-chatbot\static\.env")
+
+# 
+load_dotenv()
+
+
 api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
     raise RuntimeError("GOOGLE_API_KEY가 설정되지 않았습니다.")
